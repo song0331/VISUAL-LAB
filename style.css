@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'pretendard';
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #202020;
+  color: #fff;
+}
+
+.container {
+  min-width: 1340px;
+}
+
+header>h1 {
+  text-align: center;
+  padding: 50px 0 70px;
+  font-size: 50px;
+}
+
+nav>ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 80px;
+}
+
+nav li {
+  font-size: 22px;
+  font-weight: 500
+}
+
+nav>ul>li:nth-of-type(1)>a:hover {
+  color: #FF9A00;
+  text-decoration: underline solid;
+}
+
+nav>ul>li:nth-of-type(2)>a:hover {
+  color: #31A8FF;
+  text-decoration: underline solid;
+}
+
+nav>ul>li:nth-of-type(3)>a:hover {
+  color: #9999FF;
+  text-decoration: underline solid;
+}
+
+nav>ul>li:nth-of-type(4)>a:hover {
+  color: #9999FF;
+  text-decoration: underline solid;
+}
+
+.ment{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.illustrator,
+.photoshop,
+.premiere,
+.after-effects {
+  padding: 80px 0;
+}
+
+.illustrator>h2 {
+  color: #FF9A00;
+}
+
+.photoshop>h2 {
+  color: #31A8FF;
+}
+
+.premiere>h2 {
+  color: #9999FF;
+}
+
+.after-effects>h2 {
+  color: #9999FF;
+}
+
+.illustrator>h2,
+.photoshop>h2,
+.premiere>h2,
+.after-effects h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+h1,
+h2,
+footer,
+.illustrator,
+.photoshop,
+.after-effects {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.illustrator>ul,
+.photoshop>ul,
+.premiere>ul,
+.after-effects>ul {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.illustrator>ul>li,
+.photoshop>ul>li,
+.premiere>ul>li,
+.after-effects>ul>li {
+  width: 400px;
+  height: 225px;
+}
+
+.photoshop>ul>li:nth-of-type(13),
+.photoshop>ul>li:nth-of-type(18),
+.photoshop>ul>li:nth-of-type(19) {
+  width: 1645px;
+  height: auto;
+}
+
+.illustrator img,
+.photoshop img,
+.premiere video,
+.after-effects img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #202020a9;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.up {
+  cursor: pointer;
+  position: fixed;
+  bottom: 55px;
+  right: 25px;
+}
+
+.up>a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.up>a:hover {
+  background-color: #c7c7c7;
+  transition: all 0.2s;
+}
