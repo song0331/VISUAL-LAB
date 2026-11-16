@@ -71,11 +71,16 @@ nav>ul>li:nth-of-type(3)>a:hover {
 }
 
 nav>ul>li:nth-of-type(4)>a:hover {
-  color: #9999FF;
+  color: #FFD93D;
   text-decoration: underline solid;
 }
 
 nav>ul>li:nth-of-type(5)>a:hover {
+  color: #9999FF;
+  text-decoration: underline solid;
+}
+
+nav>ul>li:nth-of-type(6)>a:hover {
   color: #9999FF;
   text-decoration: underline solid;
 }
@@ -107,6 +112,10 @@ nav>ul>li:nth-of-type(5)>a:hover {
   color: #0AC97F;
 }
 
+.web>h2 {
+  color: #FFD93D;
+}
+
 .premiere>h2 {
   color: #9999FF;
 }
@@ -118,6 +127,7 @@ nav>ul>li:nth-of-type(5)>a:hover {
 .illustrator>h2,
 .photoshop>h2,
 .figma>h2,
+.web>h2,
 .premiere>h2,
 .after-effects h2 {
   text-align: center;
@@ -160,6 +170,7 @@ footer,
 .illustrator>ul,
 .photoshop>ul,
 .figma>ul,
+.web>ul,
 .premiere>ul,
 .after-effects>ul {
   display: flex;
@@ -193,9 +204,15 @@ footer,
   width: 400px;
 }
 
+.web>ul>li{
+  width: 815px;
+  height: auto;
+}
+
 .illustrator img,
 .photoshop img,
 .figma img,
+.web img,
 .premiere iframe,
 .after-effects img {
   width: 100%;
