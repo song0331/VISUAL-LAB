@@ -39,21 +39,20 @@ body {
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    background:
-        radial-gradient(ellipse at 15% 15%, rgba(83, 104, 165, 0.45), transparent 45%),
-        radial-gradient(ellipse at 85% 25%, rgba(101, 81, 143, 0.35), transparent 45%),
-        radial-gradient(ellipse at 50% 100%, rgba(55, 91, 145, 0.3), transparent 50%),
-        linear-gradient(135deg, #10172B 0%, #17223B 50%, #202D49 100%);
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(83, 104, 165, 0.45), transparent 45%),
+    radial-gradient(ellipse at 85% 25%, rgba(101, 81, 143, 0.35), transparent 45%),
+    radial-gradient(ellipse at 50% 100%, rgba(55, 91, 145, 0.3), transparent 50%),
+    linear-gradient(135deg, #10172B 0%, #17223B 50%, #202D49 100%);
 }
 
 .container {
-  min-width: 1645px;
+  min-width: 1450px;
 }
 
 header>h1 {
@@ -65,7 +64,7 @@ header>h1 {
 }
 
 nav {
-  width: 1645px;
+  width: 89%;
   margin: auto;
   height: 60px;
   line-height: 60px;
@@ -78,19 +77,19 @@ nav {
 }
 
 .fix {
+  width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1000;
-  min-width: 1645px;
-  width: 100%;
+  z-index: 100;
   border-radius: 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav>ul {
+  width: 90%;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  column-gap: 80px;
+  justify-content: space-evenly;
 }
 
 nav li {
@@ -99,34 +98,32 @@ nav li {
   transition: transform 0.3s ease;
 }
 
+nav>ul>li:hover {
+  transform: scale(1.03);
+}
+
 nav>ul>li:nth-of-type(1):hover {
   color: #FF9A00;
-  transform: scale(1.03);
 }
 
 nav>ul>li:nth-of-type(2):hover {
   color: #31A8FF;
-  transform: scale(1.03);
 }
 
 nav>ul>li:nth-of-type(3):hover {
   color: #0AC97F;
-  transform: scale(1.03);
 }
 
 nav>ul>li:nth-of-type(4):hover {
   color: #FFD93D;
-  transform: scale(1.03);
 }
 
 nav>ul>li:nth-of-type(5):hover {
   color: #9999FF;
-  transform: scale(1.03);
 }
 
 nav>ul>li:nth-of-type(6):hover {
   color: #9999FF;
-  transform: scale(1.03);
 }
 
 .ment {
@@ -180,18 +177,19 @@ nav>ul>li:nth-of-type(6):hover {
 .figma>h2,
 .web>h2,
 .premiere>h2,
-.after-effects h2 {
+.after-effects>h2 {
   text-align: center;
   font-size: 40px;
 }
 
 h1,
 h2,
-footer,
+.ment,
 .illustrator,
 .photoshop,
 .figma,
-.after-effects {
+.after-effects,
+footer {
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
@@ -204,12 +202,12 @@ footer,
 .web>ul,
 .premiere>ul,
 .after-effects>ul {
+  width: 89%;
   display: flex;
   margin: auto;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 15px 0;
   padding-top: 30px;
-  justify-content: center;
 }
 
 .illustrator>ul>li,
@@ -218,34 +216,16 @@ footer,
 .web>ul>li,
 .premiere>ul>li,
 .after-effects>ul>li {
-  width: 400px;
+  width: 25%;
   height: 225px;
   position: relative;
 }
 
-.figma>ul>li span,
-.web>ul>li span {
-  padding: 15px 0;
-  font-size: 1.2em;
-}
-
-main span {
-  position: absolute;
-  padding: 8px 0;
-  background-color: #000000be;
-  z-index: 10;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-}
-
-.photoshop>ul>li:nth-of-type(13),
+.photoshop>ul>li:nth-of-type(17),
 .photoshop>ul>li:nth-of-type(18),
 .photoshop>ul>li:nth-of-type(19),
 .figma>ul>li {
-  width: 1645px;
+  width: 100%;
   height: auto;
 }
 
@@ -253,12 +233,34 @@ main span {
 .figma>ul>li:nth-of-type(7),
 .figma>ul>li:nth-of-type(8),
 .figma>ul>li:nth-of-type(9) {
-  width: 400px;
+  width: 25%;
 }
 
 .web>ul>li {
-  width: 815px;
   height: auto;
+}
+
+.illustrator>ul>li>a,
+.photoshop>ul>li>a,
+.figma>ul>li>a,
+.web>ul>li>a,
+.premiere>ul>li>a,
+.after-effects>ul>li>a {
+  display: block;
+  width: 96%;
+  height: 100%;
+  margin: auto;
+}
+
+.photoshop>ul>li:nth-of-type(17)>a,
+.photoshop>ul>li:nth-of-type(18)>a,
+.photoshop>ul>li:nth-of-type(19)>a,
+.figma>ul>li:nth-of-type(1)>a,
+.figma>ul>li:nth-of-type(2)>a,
+.figma>ul>li:nth-of-type(3)>a,
+.figma>ul>li:nth-of-type(4)>a,
+.figma>ul>li:nth-of-type(5)>a {
+  width: 99%;
 }
 
 .illustrator img,
@@ -273,13 +275,32 @@ main span {
   border-radius: 4px;
 }
 
+main span {
+  position: absolute;
+  padding: 8px 0;
+  background-color: #000000be;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  border-radius: 4px;
+  width: 80%;
+  text-align: center;
+  font-size: 18px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.web>ul>li span {
+  padding: 15px 0;
+  font-size: 1.2em;
+}
+
 footer {
   z-index: 100;
   position: fixed;
   bottom: 0;
   width: 100%;
   color: #ffffffe5;
-  /* background-color: #20202060; */
   text-align: right;
   padding: 12px 20px;
   font-size: 14px;
@@ -291,6 +312,7 @@ footer {
   position: fixed;
   bottom: 55px;
   right: 25px;
+  z-index: 100;
 }
 
 .up>a {
@@ -306,4 +328,10 @@ footer {
 .up>a:hover {
   background-color: #c7c7c7;
   transition: all 0.2s;
+}
+
+@media (max-width: 960px) {
+  nav li {
+    font-size: 18px;
+  }
 }
